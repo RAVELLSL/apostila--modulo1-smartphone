@@ -5,169 +5,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Informação e Noções Gerais de Informática Básica</title>
     <style>
+                @font-face {
+            font-family: 'Open Sans';
+            src: url('OpenSans-Regular.ttf') format('truetype');
+        }
+
         @font-face {
-    font-family: 'Open Sans';
-    src: url('OpenSans-Regular.ttf') format('truetype');
-}
+            font-family: 'Roboto';
+            src: url('Roboto-Regular.ttf') format('truetype');
+        }
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('Roboto-Regular.ttf') format('truetype');
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        html, body {
+            height: 100%;
+            background-color: #f5f7fa;
+            font-size: 18px;
+            color: #333;
+            font-family: 'Open Sans', sans-serif;
+            overflow-x: hidden;
+        }
 
-html, body {
-    height: 100%;
-    background-color: #f5f7fa;
-    font-size: 18px;
-    color: #333;
-    font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden;
-}
+        .container {
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+        .cabecalho {
+            background-color: #007acc;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            color: white;
+        }
 
-.cabecalho {
-    background-color: #007acc;
-    padding: 10px;
-    text-align: center;
-    border-radius: 8px;
-    color: white;
-}
+        .cabecalho h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 22px;
+            margin: 5px 0;
+        }
 
-.cabecalho h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px;
-    margin: 5px 0;
-}
+        .corpo {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+            text-align: left; /* Alinhamento à esquerda */
+        }
 
-.corpo {
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-}
+        .coluna2 {
+            background-color: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+            line-height: 1.6;
+            text-align: left; /* Alinhamento à esquerda */
+        }
 
-.coluna2 {
-    background-color: #fafafa;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 20px;
-    line-height: 1.6;
-}
+        h2 {
+            text-align: center;
+            font-size: 22px;
+            color: #007acc;
+            margin-bottom: 10px;
+        }
 
-h2 {
-    text-align: center;
-    font-size: 22px;
-    color: #007acc;
-    margin-bottom: 10px;
-}
+        h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0 8px;
+        }
 
-h3 {
-    font-size: 18px;
-    color: #333;
-    margin: 10px 0 8px;
-}
+        p, ul {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 12px;
+            text-align: left; /* Alinhamento à esquerda */
+        }
 
-p, ul {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 12px;
-}
+        ul li {
+            margin-bottom: 6px;
+        }
 
-ul li {
-    margin-bottom: 6px;
-}
+        .imagem-principal {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
 
-.imagem-principal {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    margin: 15px 0;
-}
+        .descricao-texto {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: left; /* Alinhamento à esquerda */
+        }
 
-.descricao-texto {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: justify;
-}
+        .rodape {
+            background-color: #007acc;
+            padding: 6px;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-top: 20px;
+            color: #ffffff; /* Ajuste da cor do rodapé */
+        }
 
-.rodape {
-    background-color: #007acc;
-    padding: 6px;
-    text-align: center;
-    color: white;
-    font-size: 16px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
+        /* Estilos para dispositivos móveis */
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+                margin: 5px;
+            }
 
-/* Estilos para dispositivos móveis */
-@media screen and (max-width: 600px) {
-    .container {
-        padding: 10px;
-        margin: 5px;
-    }
+            .cabecalho h1 {
+                font-size: 20px;
+            }
 
-    .cabecalho h1 {
-        font-size: 20px;
-    }
+            h2 {
+                font-size: 20px;
+            }
 
-    h2 {
-        font-size: 20px;
-    }
+            h3 {
+                font-size: 17px;
+            }
 
-    h3 {
-        font-size: 17px;
-    }
+            p, ul, .descricao-texto {
+                font-size: 17px;
+                line-height: 1.5;
+                text-align: left; /* Alinhamento à esquerda em telas menores */
+            }
 
-    p, ul, .descricao-texto {
-        font-size: 17px;
-        line-height: 1.5;
-    }
+            .rodape {
+                font-size: 15px;
+            }
+        }
 
-    .rodape {
-        font-size: 15px;
-    }
-}
+        /* Estilo da tabela com rolagem lateral */
+        .tabela-container {
+            overflow-x: auto;
+            margin: 15px 0;
+        }
 
-/* Estilo da tabela */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 15px 0;
-    font-size: 18px;
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 18px;
+            min-width: 600px; /* Define largura mínima para rolagem */
+        }
 
-th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
 
-th {
-    background-color: #e0f0ff;
-    font-weight: bold;
-}
+        th {
+            background-color: #e0f0ff;
+            font-weight: bold;
+        }
 
-td {
-    font-size: 17px;
-}
-
+        td {
+            font-size: 17px;
+        }
     </style>
 </head>
 <body>
@@ -869,54 +878,56 @@ td {
                 
                     <h4>Funções da Memória Auxiliar</h4>
                     <ul class="descricao-texto">
-                        <li><strong>Armazenamento Portátil:</strong> Permite o armazenamento e transporte de dados de maneira fácil e conveniente.</li>
-                        <li><strong>Expansão de Armazenamento:</strong> Fornece uma forma fácil de expandir a capacidade de armazenamento sem a necessidade de abrir o computador.</li>
+                      strong  <li><strong>Armazenamento Portátil:</strong> Permite o armazenamento e transporte de dados de maneira fácil e conveniente.</li>
+                        <li><>Expansão de Armazenamento:</strong> Fornece uma forma fácil de expandir a capacidade de armazenamento sem a necessidade de abrir o computador.</li>
                         <li><strong>Backup e Recuperação:</strong> Utilizada para fazer backups de dados importantes de forma segura e acessível.</li>
                     </ul>
                 
                     <h3>Comparação entre Memórias Principal, Secundária e Auxiliar</h3>
-                    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-                        <thead>
-                            <tr>
-                                <th>Característica</th>
-                                <th>Memória Principal (RAM)</th>
-                                <th>Memória Secundária</th>
-                                <th>Memória Auxiliar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Volatilidade</td>
-                                <td>Volátil</td>
-                                <td>Não volátil</td>
-                                <td>Não volátil</td>
-                            </tr>
-                            <tr>
-                                <td>Velocidade de Acesso</td>
-                                <td>Muito alta</td>
-                                <td>Moderada</td>
-                                <td>Variável</td>
-                            </tr>
-                            <tr>
-                                <td>Capacidade de Armazenamento</td>
-                                <td>Moderada</td>
-                                <td>Alta</td>
-                                <td>Variável</td>
-                            </tr>
-                            <tr>
-                                <td>Propósito</td>
-                                <td>Armazenamento temporário</td>
-                                <td>Armazenamento permanente</td>
-                                <td>Armazenamento portátil</td>
-                            </tr>
-                            <tr>
-                                <td>Exemplos</td>
-                                <td>DRAM, SRAM</td>
-                                <td>HDD, SSD, CD/DVD</td>
-                                <td>Pen drives, cartões de memória, discos externos, nuvem</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="tabela-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Característica</th>
+                                    <th>Memória Principal (RAM)</th>
+                                    <th>Memória Secundária</th>
+                                    <th>Memória Auxiliar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Volatilidade</td>
+                                    <td>Volátil</td>
+                                    <td>Não volátil</td>
+                                    <td>Não volátil</td>
+                                </tr>
+                                <tr>
+                                    <td>Velocidade de Acesso</td>
+                                    <td>Muito alta</td>
+                                    <td>Moderada</td>
+                                    <td>Variável</td>
+                                </tr>
+                                <tr>
+                                    <td>Capacidade de Armazenamento</td>
+                                    <td>Moderada</td>
+                                    <td>Alta</td>
+                                    <td>Variável</td>
+                                </tr>
+                                <tr>
+                                    <td>Propósito</td>
+                                    <td>Armazenamento temporário</td>
+                                    <td>Armazenamento permanente</td>
+                                    <td>Armazenamento portátil</td>
+                                </tr>
+                                <tr>
+                                    <td>Exemplos</td>
+                                    <td>DRAM, SRAM</td>
+                                    <td>HDD, SSD, CD/DVD</td>
+                                    <td>Pen drives, cartões de memória, discos externos, nuvem</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 
                     <h3>Conclusão</h3>
                     <p class="descricao-texto">A memória desempenha um papel fundamental nos sistemas computacionais, com diferentes tipos de memória atendendo a necessidades específicas de armazenamento e acesso a dados. A memória principal oferece armazenamento temporário e rápido para execução de programas, a memória secundária fornece armazenamento permanente de grande capacidade, e a memória auxiliar oferece soluções portáteis e flexíveis para armazenamento e transferência de dados. Compreender as características e funções de cada tipo de memória é essencial para otimizar o desempenho e a eficiência de um sistema computacional.</p>
